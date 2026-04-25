@@ -1,22 +1,27 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 12vh;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-    "header"
-    "main" 
-    ;
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
 }
 
 header {
@@ -27,6 +32,10 @@ header {
     align-items: center;
     border-bottom: 1.5px solid gray;
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
 }
 
 nav ul {
@@ -49,5 +58,48 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 1em;
+    overflow-y: auto;
 }
 
+.images-section {
+    overflow: auto;
+    padding: 16px 32px;
+}
+
+.main-image-container {
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    height: 80%;
+    margin: 0 auto 16px;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.image-small {
+    background-color: gray;
+    height: 200px;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+    background-color: white;
+}
