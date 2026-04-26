@@ -3,57 +3,150 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Aura Perfume Landing Page</title>
+        <meta
+            name="description"
+            content="Discover Coco Noir luxury perfume - an enigmatic blend of rare oud, midnight jasmine, and aged amber."
+        />
+        <title>Coco Noir | Premium Perfume Landing Page</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <div class="grid-container">
             <header>
-                <div class="h1-container">
-                    <h1>AURA</h1>
-                </div>
+                <a href="#home" class="logo-link">
+                    <img
+                        class="logo"
+                        src="assets/images/logo.png"
+                        alt="Coco Noir"
+                    />
+                    <h1>Coco</h1>
+                </a>
                 <nav class="navigation">
                     <ul>
-                        <li><a href="#">Collection</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#collection">Collection</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="left-container">
-                    <button><span class="icon icon-search"></span></button>
-                    <button><span class="icon icon-cart"></span></button>
+                    <button aria-label="Search products">
+                        <span class="icon icon-search"></span>
+                    </button>
+                    <button aria-label="Shopping cart">
+                        <span class="icon icon-cart"></span>
+                    </button>
                 </div>
             </header>
 
             <main>
                 <section class="images-section">
                     <div class="main-image-container">
-                        <img class="main-image" src="laura-chouette-4sKdeIMiFEI-unsplash.jpg">
+                        <img
+                            class="main-image"
+                            src="./fernando-andrade-potCPE_Cw8A-unsplash.jpg"
+                            alt="Coco Noir luxury perfume bottle"
+                        />
                     </div>
-                    <div class="small-images-container">
-                        <div class="image-small image1">
-                            
-                        </div>
-                        <div class="image-small image2"></div>
-                        <div class="image-small image3"></div>
+                    <div
+                        class="small-images-container"
+                        role="region"
+                        aria-label="Product image thumbnails"
+                    >
+                        <button
+                            class="image-small image1"
+                            aria-label="View product image 1"
+                        >
+                            <img
+                                src="assets/images/product-1.jpg"
+                                alt="Coco Noir packaging"
+                            />
+                        </button>
+                        <button
+                            class="image-small image2"
+                            aria-label="View product image 2"
+                        >
+                            <img
+                                src="assets/images/product-2.jpg"
+                                alt="Coco Noir bottle detail"
+                            />
+                        </button>
+                        <button
+                            class="image-small image3"
+                            aria-label="View product image 3"
+                        >
+                            <img
+                                src="assets/images/product-3.jpg"
+                                alt="Coco Noir in use"
+                            />
+                        </button>
                     </div>
                 </section>
+
                 <section class="text-section">
                     <article>
-                        <h3>Aura Noir</h3>
-                        <p>An enigmatic blend of rare oud, midnight jasmine,and aged amber. Each note unfolds like a whispered secret, leaving an unforgettable trail of sophistication.</p>
-                        <p class="price">$285 <span class="old-price">$340</span></p>
+                        <h2>Coco Noir</h2>
+                        <p>
+                            An enigmatic blend of rare oud, midnight jasmine,
+                            and aged amber. Each note unfolds like a whispered
+                            secret, leaving an unforgettable trail of
+                            sophistication.
+                        </p>
 
-                        <div class="sizes-btn-container">
-                            <button class="size-btn">30ml</button>
-                            <button class="size-btn">50ml</button>
-                            <button class="size-btn">100ml</button>
+                        <div class="pricing">
+                            <span class="price">$285</span>
+                            <span class="old-price">$340</span>
                         </div>
-                        <button class="CTA-addtocart">Add to Cart</button>
+
+                        <form class="product-form">
+                            <fieldset>
+                                <legend>Select Size</legend>
+                                <div class="sizes-btn-container">
+                                    <input
+                                        type="radio"
+                                        id="size-30ml"
+                                        name="size"
+                                        value="30ml"
+                                    />
+                                    <label for="size-30ml" class="size-btn"
+                                        >30ml</label
+                                    >
+
+                                    <input
+                                        type="radio"
+                                        id="size-50ml"
+                                        name="size"
+                                        value="50ml"
+                                    />
+                                    <label for="size-50ml" class="size-btn"
+                                        >50ml</label
+                                    >
+
+                                    <input
+                                        type="radio"
+                                        id="size-100ml"
+                                        name="size"
+                                        value="100ml"
+                                    />
+                                    <label for="size-100ml" class="size-btn"
+                                        >100ml</label
+                                    >
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="CTA-addtocart">
+                                Add to Cart
+                            </button>
+                        </form>
                     </article>
-                    <div class="accordion-container"></div>
+
+                    <details class="accordion-container">
+                        <summary>Product Details</summary>
+                        <div class="accordion-content">
+                            <!-- Add accordion content here -->
+                        </div>
+                    </details>
                 </section>
             </main>
+
             <footer>
                 <p>Last updated: April 26, 2026 - 6:30am</p>
             </footer>
