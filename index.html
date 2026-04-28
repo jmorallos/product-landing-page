@@ -11,97 +11,155 @@
 </head>
 
 <body>
+    <!-- Skip to main content link for accessibility -->
+
     <div class="grid-container">
-        <header>
-            <a href="#home" class="logo-link">
-                <div class="logo-placeholder img-placeholder">
-                </div>
+        <!-- ==================== HEADER ==================== -->
+        <header role="banner">
+            <!-- Logo & Brand -->
+            <a href="#home" class="logo-link" aria-label="Coco Noir Home">
+                <div class="logo-placeholder" aria-hidden="true"></div>
                 <h1>Coco</h1>
             </a>
-            <nav class="navigation">
+
+            <!-- Primary Navigation -->
+            <nav class="navigation" aria-label="Primary navigation">
                 <ul>
                     <li><a href="#collection">Collection</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="left-container">
-                <button aria-label="Search products" class="header-btn">
-                    <span class="icon icon-search"></span>
+
+            <!-- Header Actions -->
+            <div class="left-container" aria-label="Header actions">
+                <button type="button" aria-label="Search products" class="header-btn header-btn--search">
+                    <span class="icon icon-search" aria-hidden="true"></span>
                 </button>
-                <button aria-label="Shopping cart" class="header-btn">
-                    <span class="icon icon-cart"></span>
+                <button type="button" aria-label="Shopping cart" class="header-btn header-btn--cart">
+                    <span class="icon icon-cart" aria-hidden="true"></span>
                 </button>
             </div>
         </header>
 
-        <main>
-            <section class="images-section">
-                <div class="main-image-container">
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main id="main-content" role="main">
+            <!-- ===== PRODUCT IMAGES SECTION ===== -->
+            <section class="images-section" aria-label="Product images">
+                <div class="main-image-container" role="img" aria-label="Coco Noir Perfume Product Image">
                 </div>
+
                 <div class="small-images-container" role="region" aria-label="Product image thumbnails">
-                    <button class="image-small image1" aria-label="View product image 1">
+                    <button 
+                        type="button"
+                        class="image-small" 
+                        aria-label="View product image 1"
+                        data-image="1">
                     </button>
-                    <button class="image-small image2" aria-label="View product image 2">
+                    <button 
+                        type="button"
+                        class="image-small" 
+                        aria-label="View product image 2"
+                        data-image="2">
                     </button>
-                    <button class="image-small image3" aria-label="View product image 3">
+                    <button 
+                        type="button"
+                        class="image-small" 
+                        aria-label="View product image 3"
+                        data-image="3">
                     </button>
-                    <button class="image-small image3" aria-label="View product image 3">
+                    <button 
+                        type="button"
+                        class="image-small" 
+                        aria-label="View product image 4"
+                        data-image="4">
                     </button>
                 </div>
             </section>
 
-            <section class="text-section">
-                <article>
+            <!-- ===== PRODUCT DETAILS SECTION ===== -->
+            <section class="text-section" aria-label="Product details and purchase">
+                <!-- Product Information -->
+                <article class="product-info">
                     <h2>Coco Noir</h2>
-                    <p>
+                    <p class="product-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla laboriosam aut odit atque cupiditate fuga porro delectus voluptatum doloribus, ducimus est veniam, tempora officia. Reiciendis nobis amet doloremque quis rerum!
                     </p>
 
-                    <div class="pricing">
-                        <span class="price">$285</span>
-                        <span class="old-price">$340</span>
+                    <!-- Pricing -->
+                    <div class="pricing" aria-label="Pricing information">
+                        <span class="price" aria-label="Current price">$285</span>
+                        <span class="old-price" aria-label="Original price">$340</span>
                     </div>
 
-                    <form class="product-form">
-                        <fieldset>
+                    <!-- Product Form -->
+                    <form class="product-form" aria-label="Add to cart form">
+                        <!-- Size Selection -->
+                        <fieldset class="form-group">
                             <legend>Select Size</legend>
-                            <div class="sizes-btn-container">
-                                <label class="size-btn">
-                                    <input type="radio" id="size-30ml" name="size" value="30ml" />
-                                    <p>30 ML</p>
-                                    <p>$195</p>
+                            <div class="sizes-btn-container" role="group" aria-labelledby="size-legend">
+                                <!-- 30ml Size -->
+                                <label class="size-btn" for="size-30ml">
+                                    <input 
+                                        type="radio" 
+                                        id="size-30ml" 
+                                        name="size" 
+                                        value="30ml"
+                                        aria-describedby="size-30-price" />
+                                    <span class="size-label">30 ML</span>
+                                    <span class="size-price" id="size-30-price">$195</span>
                                 </label>
 
-                                <label class="size-btn size-btn-checked">
-                                    <input type="radio" id="size-50ml" name="size" value="50ml" checked />
-                                    <p>50 ML</p>
-                                    <p>$285</p>
+                                <!-- 50ml Size (Default) -->
+                                <label class="size-btn size-btn-checked" for="size-50ml">
+                                    <input 
+                                        type="radio" 
+                                        id="size-50ml" 
+                                        name="size" 
+                                        value="50ml"
+                                        checked
+                                        aria-describedby="size-50-price" />
+                                    <span class="size-label">50 ML</span>
+                                    <span class="size-price" id="size-50-price">$285</span>
                                 </label>
 
-                                <label for="size-100ml" class="size-btn">
-                                    <input type="radio" id="size-100ml" name="size" value="100ml" />
-                                    <p>100 ML</p>
-                                    <p>$480</p>
+                                <!-- 100ml Size -->
+                                <label class="size-btn" for="size-100ml">
+                                    <input 
+                                        type="radio" 
+                                        id="size-100ml" 
+                                        name="size" 
+                                        value="100ml"
+                                        aria-describedby="size-100-price" />
+                                    <span class="size-label">100 ML</span>
+                                    <span class="size-price" id="size-100-price">$480</span>
                                 </label>
                             </div>
                         </fieldset>
-                        <button type="submit" class="CTA-addtocart">
+
+                        <!-- Add to Cart Button -->
+                        <button 
+                            type="submit" 
+                            class="CTA-addtocart"
+                            aria-label="Add Coco Noir to shopping cart">
                             Add to Cart
                         </button>
                     </form>
                 </article>
 
+                <!-- Product Details Accordion -->
                 <details class="accordion-container">
                     <summary>Product Details</summary>
                     <div class="accordion-content">
-                        <!-- Add accordion content here -->
+                        <!-- Accordion content will be populated here -->
+                        <p>Premium ingredients and craftsmanship details coming soon.</p>
                     </div>
                 </details>
             </section>
         </main>
 
-        <footer>
+        <!-- ==================== FOOTER ==================== -->
+        <footer role="contentinfo">
             <p>Last updated: April 26, 2026 - 6:30am</p>
         </footer>
     </div>

@@ -1,5 +1,4 @@
 /* Mobile First Design */
-/* I wrote this in develop branch and commited in develop branch */
 :root {
     /* === BRAND === */
     --color-primary-500: #4A90E2;
@@ -38,6 +37,19 @@
     /* === INTERACTION STATES === */
     --color-hover-overlay: rgba(0, 0, 0, 0.05);
     --color-disabled: #D1D9E0;
+
+    --xsm: 4px;
+    --sm: 8px;
+    --medium: 16px;
+    --large: 32px;
+    --xl: 64px;
+
+    --rd-round: 50%;
+    --rd-sm: 5px;
+    --rd-medium: 8px;
+    --rd-md-large: 10px;
+    --rd-large: 16px;
+    --rd-md-large: 20px;
 }
 
 *,
@@ -52,7 +64,7 @@ body {
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
-    background-color: white;
+    background-color: var(--color-bg);
     line-height: 1.5;
 }
 
@@ -75,9 +87,11 @@ nav {
 
 header {
     grid-area: header;
-    background-color: var(--background-surface);
-    position: sticky;
+    background-color: var(--color-surface);
+    position: fixed;
     top: 0;
+    width: 100%;
+    height: 80px;
     z-index: 100;
     display: flex;
     flex-direction: row;
@@ -104,7 +118,7 @@ a {
     width: 48px;
     height: 48px;
     border-radius: var(--rd-round);
-    background: linear-gradient(45deg, var(--brown), var(--background-surface));
+    background: linear-gradient(45deg, var(--color-primary-600), var(--color-surface-alt), var(--color-primary-600));
 }
 
 h1 {
@@ -121,13 +135,15 @@ main {
 
 section {
     margin-bottom: var(--medium);
+    background-color: var(--color-surface);
 }
 
 .main-image-container {
     width: 100%;
     height: 450px;
     border: 1px solid black;
-    margin-bottom: var(--sm);
+    margin-bottom: var(--large);
+    border-radius: var(--rd-large);
 }
 
 .small-images-container {
@@ -140,6 +156,7 @@ section {
     width: 80px;
     height: 80px;
     border: 1px solid black;
+    border-radius: var(--rd-md-large);
 }
 
 fieldset {
@@ -154,7 +171,8 @@ fieldset {
 }
 
 article {
-    margin-bottom: var(--medium);
+    padding: var(--medium);
+    margin-bottom: var(--large);
 }
 
 /* FOOTER */
@@ -177,7 +195,8 @@ input[type="radio"] {
     align-items: center;
     justify-content: center;
     height: 80px;
-    border: 1px solid black
+    border: 1px solid black;
+    border-radius: var(--rd-medium);
 }
 
 .size-btn-checked {
@@ -187,6 +206,7 @@ input[type="radio"] {
 .CTA-addtocart {
     width: 100%;
     height: 90px;
+    border-radius: var(--rd-medium);
 }
 
 /* ICONS */
@@ -206,4 +226,9 @@ input[type="radio"] {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+/* implement responsive for different devices */
+@media only screen {
+    
 }
