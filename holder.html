@@ -1,0 +1,94 @@
+<!-- ==================== MAIN CONTENT ==================== -->
+        <main id="main-content" role="main">
+            <!-- ===== PRODUCT IMAGES SECTION ===== -->
+            <section class="images-section" aria-label="Product images">
+                <div class="main-image-container" role="img" aria-label="Coco Noir Perfume Product Image">
+                </div>
+
+                <div class="small-images-container" role="region" aria-label="Product image thumbnails">
+                    <button type="button" class="image-small" aria-label="View product image 1" data-image="1">
+                    </button>
+                    <button type="button" class="image-small" aria-label="View product image 2" data-image="2">
+                    </button>
+                    <button type="button" class="image-small" aria-label="View product image 3" data-image="3">
+                    </button>
+                    <button type="button" class="image-small" aria-label="View product image 4" data-image="4">
+                    </button>
+                </div>
+            </section>
+
+            <!-- ===== PRODUCT DETAILS SECTION ===== -->
+            <section class="text-section" aria-label="Product details and purchase">
+                <!-- Product Information -->
+                <article class="product-info">
+                    <h2>Coco Noir</h2>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla laboriosam aut odit atque
+                        cupiditate fuga porro delectus voluptatum doloribus, ducimus est veniam, tempora officia.
+                        Reiciendis nobis amet doloremque quis rerum!
+                    </p>
+
+                    <!-- Pricing -->
+                    <div class="pricing" aria-label="Pricing information">
+                        <span class="price" aria-label="Current price">$285</span>
+                        <span class="old-price" aria-label="Original price">$340</span>
+                    </div>
+
+                    <!-- Product Form -->
+                    <form class="product-form" aria-label="Add to cart form">
+                        <!-- Size Selection -->
+                        <fieldset class="form-group">
+                            <legend>Select Size</legend>
+                            <div class="sizes-btn-container" role="group" aria-labelledby="size-legend">
+                                <!-- 30ml Size -->
+                                <label class="size-btn" for="size-30ml">
+                                    <input type="radio" id="size-30ml" name="size" value="30ml"
+                                        aria-describedby="size-30-price" />
+                                    <span class="size-label">30 ML</span>
+                                    <span class="size-price" id="size-30-price">$195</span>
+                                </label>
+
+                                <!-- 50ml Size (Default) -->
+                                <label class="size-btn size-btn-checked" for="size-50ml">
+                                    <input type="radio" id="size-50ml" name="size" value="50ml" checked
+                                        aria-describedby="size-50-price" />
+                                    <span class="size-label">50 ML</span>
+                                    <span class="size-price" id="size-50-price">$285</span>
+                                </label>
+
+                                <!-- 100ml Size -->
+                                <label class="size-btn" for="size-100ml">
+                                    <input type="radio" id="size-100ml" name="size" value="100ml"
+                                        aria-describedby="size-100-price" />
+                                    <span class="size-label">100 ML</span>
+                                    <span class="size-price" id="size-100-price">$480</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <!-- Add to Cart Button -->
+                        <button type="submit" class="CTA-addtocart" aria-label="Add Coco Noir to shopping cart">
+                            Add to Cart
+                        </button>
+                    </form>
+                </article>
+
+
+            </section>
+
+            <section class="product-details">
+                <!-- Product Details Accordion -->
+                <details class="accordion-container">
+                    <summary>Product Details</summary>
+                    <div class="accordion-content">
+                        <!-- Accordion content will be populated here -->
+                        <p>Premium ingredients and craftsmanship details coming soon.</p>
+                    </div>
+                </details>
+            </section>
+        </main>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer role="contentinfo">
+            <p>Last updated: April 26, 2026 - 6:30am</p>
+        </footer>
