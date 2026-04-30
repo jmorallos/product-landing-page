@@ -1,6 +1,9 @@
-const closeNav = () => {
-    document.getElementById("mySideNav").style.width = "0";
-}
+const myNav = document.getElementById("mySideNav");
+
 const openNav = () => {
-    document.getElementById("mySideNav").style.width = "250px";
+    myNav.classList.add("is-open");
+}
+
+const closeNav = () => {
+    myNav.classList.remove("is-open");
 }

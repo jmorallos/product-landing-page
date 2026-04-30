@@ -55,7 +55,7 @@
     --font-size-lg: 20px;
     --font-size-xl: 24px;
     --font-size-2xl: 32px;
-    
+
     /* === LINE HEIGHTS === */
     --line-height-tight: 1.2;
     --line-height-normal: 1.5;
@@ -100,8 +100,8 @@ a {
 
 .sidenav {
     position: fixed;
-    width: 0;
     height: 100%;
+    width: 0;
     z-index: 100;
     top: 0;
     left: 0;
@@ -111,12 +111,16 @@ a {
     transition: width 0.3s ease-out;
 }
 
+.is-open {
+    width: 250px;
+}
+
 .sidenav a {
     color: var(--color-surface);
     font-size: var(--md-lg);
 }
 
-.sidenav ul li  {
+.sidenav ul li {
     padding: var(--sm) var(--sm) var(--sm) var(--lg);
     list-style: none;
 }
@@ -130,9 +134,11 @@ a {
 button {
     display: block;
 }
+
 #openBtn {
     border: 1px solid var(--color-primary-500);
 }
+
 header {
     display: flex;
     flex-direction: row;
@@ -146,6 +152,7 @@ header {
 header .left-container {
     width: 30%;
 }
+
 header a {
     text-align: center;
     width: 100%;
@@ -160,6 +167,7 @@ header .right-container {
 }
 
 @media only screen and (min-width: 768px) {
+
     nav #closeBtn,
     header .left-container {
         display: none;
@@ -175,13 +183,19 @@ header .right-container {
     }
 
     .sidenav {
-        position: static;
-        width: unset;
-        height: unset;
+        display: flex !important;
+        position: static !important;
+        width: auto !important;
+        height: auto;
         padding: 0;
+        overflow: visible;
         transition: none;
-        background-color: inherit;
-        }
+        background-color: transparent;
+    }
+
+    #closBtn {
+        display: none;
+    }
 
     .sidenav ul {
         display: flex;
