@@ -14,7 +14,7 @@
 <body>
     <div class="grid-container">
         <!-- ==================== HEADER ==================== -->
-        <header role="banner">
+        <header id="header" role="banner">
             <div class="left-container">
                 <button id="openBtn" type="button" class="icon-button hamburger" aria-label="open sidebar"
                     onclick="openNav()"></button>
@@ -42,6 +42,7 @@
                 <button type="button" aria-label="Shopping cart" class="icon-button cart">
                 </button>
             </div>
+            <div id="overlay" class="overlay" onclick="closeNav()"></div>
         </header>
 
     </div>
